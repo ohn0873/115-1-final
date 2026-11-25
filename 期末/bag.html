@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>發現袋子｜市場袋探險</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="bag-header">
+      <div class="bag-discovery-mark">發現</div>
+
+      <div class="bag-header-title">
+        <p class="bag-header-kicker">市場袋探險 · 隱藏發現</p>
+
+        <h1 id="stall-name"></h1>
+
+        <p>發現了一個市場袋！</p>
+      </div>
+    </header>
+
+    <main class="bag-game">
+      <div class="bag-stage-label" aria-hidden="true">請打開袋子</div>
+
+      <div
+        class="bag-area"
+        role="button"
+        tabindex="0"
+        aria-label="點擊袋子打開"
+        onclick="openBag()"
+        onkeydown="if (event.key === 'Enter' || event.key === ' ') openBag();"
+      >
+        <div class="bag-cover left"></div>
+
+        <img id="bag-img" src="" alt="bag" />
+
+        <div class="bag-cover right"></div>
+      </div>
+
+      <button type="button" class="hint" onclick="openBag()">
+        <span class="hint-icon">＋</span>
+        <span>點擊袋子打開</span>
+      </button>
+
+      <section id="result" class="result hidden">
+        <h2>袋子記憶解鎖</h2>
+
+        <div class="change-area">
+          <div class="bag-show">
+            <h3>Original</h3>
+
+            <img id="original-img" src="" />
+          </div>
+
+          <div class="change-arrow">→</div>
+
+          <div class="bag-show redesign">
+            <h3>Redesign</h3>
+
+            <img id="design-img" src="" />
+          </div>
+        </div>
+
+        <p id="concept"></p>
+
+        <button onclick="collectBag()">收集袋子</button>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

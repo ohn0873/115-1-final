@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>先想一想｜市場袋探險</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="background-pattern"></div>
+
+    <main class="question-page">
+      <section class="bag-question" aria-labelledby="question-title">
+        <p class="question-kicker">先停一下想一想</p>
+
+        <h1 id="question-title">你會不會用一次就把袋子丟掉？</h1>
+
+        <p class="question-copy">選擇你的答案，開始今天的市場袋探險。</p>
+
+        <div class="answer-list" role="group" aria-label="選擇答案">
+          <button class="answer-btn" type="button" data-answer="yes">會</button>
+          <button class="answer-btn" type="button" data-answer="no">
+            不會
+          </button>
+        </div>
+
+        <p
+          id="answerResult"
+          class="answer-result hidden"
+          aria-live="polite"
+        ></p>
+
+        <button id="bagStartBtn" class="hidden">開始探險</button>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
